@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "monydevelop-me",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "My personal site starter theme, made with love and Gatsby",
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "wtfpl",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -22,9 +22,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/Karmesi/monydevelop.me"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Karmesi/monydevelop.me/issues"
   }
 }
