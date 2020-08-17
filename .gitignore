@@ -1,3 +1,6 @@
 .cache
 node_modules
-public
+/public
+/resources
+/dist
+/src/.temp
