@@ -1,0 +1,8 @@
+<% if (site.posts.length >= 1) { %>
+  <div class="widget-wrap">
+    <strong class="widget-title">Recent posts</strong>
+    <div class="widget">
+      <%- list_posts({amount: 3}) %>
+    </div>
+  </div>
+<% } %>
