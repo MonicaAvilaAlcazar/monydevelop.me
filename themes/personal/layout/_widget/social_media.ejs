@@ -1,9 +1,0 @@
-<div class="widget-wrap">
-	<div class="widget-content">
-		<% theme.social_media.forEach(function(account){ %>
-			<a href="<%- account.link %>" style="text-decoration: none;">
-				<img width="30" height="30" src="<%- theme.cloudinary.uploads_url %><%- theme.cloudinary.version %>/<%- account.icon %>" alt="<%- account.name %>" style="background-color: white;">
-			</a>
-		<% }) %>
-	</div>
-</div>

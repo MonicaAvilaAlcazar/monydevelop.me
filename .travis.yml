@@ -1,18 +1,18 @@
 dist: xenial
 sudo: required
-
 language: node_js
 node_js:
   - "stable"
-
+branches:
+  only:
+  - master
 install:
-  - npm install --global @gridsome/cli
-  - npm install
-
+- npm install hexo-cli -g
+- npm install
 script:
-  - gridsome -v    # Prints the Gridsome version, just in case.
-  - gridsome build # Build the website
-
+- hexo clean
+- hexo generate
+- hexo deploy
 env:
   global:
     - PRODUCTION=true
