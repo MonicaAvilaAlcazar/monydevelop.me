@@ -1,0 +1,35 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- category
+- archive
+- recent_posts
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics: UA-120847964-1
+gauges_analytics:
+favicon: https://res.cloudinary.com/monydevelop-me/image/upload/v1586637186/favicon.ico
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
