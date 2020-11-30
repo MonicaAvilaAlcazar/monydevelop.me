@@ -7,13 +7,13 @@ node_js:
 branches:
   only:
   - master
+before_install:
+- npm install -g hexo
 install:
-- npm install hexo-cli -g
 - npm install
 script:
 - hexo clean
 - hexo generate
-- hexo deploy
 env:
   global:
     - PRODUCTION=true
