@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= config.language %>">
 <head>
   <meta charset="utf-8">
-  <script src="https://cmp.osano.com/169lawSKgaoNg4cdd/da723e2c-19ff-4b6c-9203-1c536998ab3f/osano.js"></script>
-  <%- partial('google-analytics') %>
   <%
   var title = page.title;
 
   if (is_archive()){
     title = __('archive_a');
-
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
     } else if (is_year()){
@@ -20,10 +17,14 @@
   } else if (is_tag()){
     title = __('tag') + ': ' + page.tag;
   }
+
+  if (!title){
+    title = config.title;
+  }
   %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title><%= title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <%- open_graph({title: title}) %>
   <% if (theme.rss){ %>
     <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
@@ -34,4 +35,6 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
   <%- css('css/style') %>
+  <script src="https://cmp.osano.com/169lawSKgaoNg4cdd/da723e2c-19ff-4b6c-9203-1c536998ab3f/osano.js"></script>
+  <%- partial('google-analytics') %>
 </head>
