@@ -1,7 +1,6 @@
 .cache
-.nvmrc
 node_modules
-/public
+/build
 /resources
 /dist
 /src/.temp
