@@ -1,5 +1,4 @@
 .cache
-.nvmrc
 node_modules
 /build
 /resources
