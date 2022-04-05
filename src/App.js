@@ -2,24 +2,25 @@ import Header from './Header';
 import Body from './Body';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import { Fragment } from 'react';
+import { Container } from 'react-bootstrap';
+import './App.scss'
 
 function App() {
     return (
-        <Fragment>
+        <Container>
             <header className="app-header">
                 <Header />
             </header>
             <main className="app-main">
                 <Body />
+                <aside className="app-sidebar container">
+                    <Sidebar />
+                </aside>
             </main>
-            <aside className="app-sidebar">
-                <Sidebar />
-            </aside>
             <footer className="app-footer">
                 <Footer />
             </footer>
-        </Fragment>
+        </Container>
     );
 }
 
