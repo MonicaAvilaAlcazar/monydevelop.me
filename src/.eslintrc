@@ -1,30 +1,26 @@
 {
-  "rules": {
-    "prefer-const": 1,
-    "no-var": 1,
-    "prefer-template": 1,
-    "no-eval": 1,
-    "space-before-function-paren": [
-      1,
-      {
-        "anonymous": "always",
-        "named": "never"
-      }
-    ],
-    "arrow-parens": 0,
-    "no-duplicate-imports": 1,
-    "curly": ["error"],
-    "brace-style": [
-      1,
-      "1tbs",
-      { "allowSingleLine": true }
-    ],
-    "no-else-return": 1,
-    "indent": ["error", 4],
-    "space-in-parens": [1, "never"],
-    "array-bracket-spacing": [1, "never"],
-    "object-curly-spacing": [1, "always"],
-    "block-spacing": 1,
-    "radix": 1
-  }
+    "rules": {
+        "prefer-const": 1,
+        "no-var": 1,
+        "prefer-template": 1,
+        "no-eval": 1,
+        "space-before-function-paren": [
+            1,
+            {
+                "anonymous": "always",
+                "named": "never"
+            }
+        ],
+        "arrow-parens": 0,
+        "no-duplicate-imports": 1,
+        "curly": ["error"],
+        "brace-style": [1, "1tbs", { "allowSingleLine": true }],
+        "no-else-return": 1,
+        "indent": ["error", 4],
+        "space-in-parens": [1, "never"],
+        "array-bracket-spacing": [1, "never"],
+        "object-curly-spacing": [1, "always"],
+        "block-spacing": 1,
+        "radix": 1
+    }
 }

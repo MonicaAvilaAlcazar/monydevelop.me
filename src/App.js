@@ -1,9 +1,8 @@
-import Header from './Header';
-import Body from './Body';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-import { Container } from 'react-bootstrap';
-import './App.scss'
+import Header from './Header'
+import Body from './Body'
+import Sidebar from './Sidebar'
+import Footer from './Footer'
+import { Container } from 'react-bootstrap'
 
 function App() {
     return (
@@ -21,7 +20,7 @@ function App() {
                 <Footer />
             </footer>
         </Container>
-    );
+    )
 }
 
-export default App;
+export default App
