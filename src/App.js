@@ -1,8 +1,9 @@
 import Header from './Header'
-import Body from './Body'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
+import Main from './Main'
 import { Container } from 'react-bootstrap'
+import './App.scss'
 
 function App() {
     return (
@@ -11,7 +12,7 @@ function App() {
                 <Header />
             </header>
             <main className="app-main">
-                <Body />
+                <Main />
                 <aside className="app-sidebar container">
                     <Sidebar />
                 </aside>
