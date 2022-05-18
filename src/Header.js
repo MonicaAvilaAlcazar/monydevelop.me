@@ -2,7 +2,7 @@ import { Nav, Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const Header = () => (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar id="app-header-navigation" expand="lg">
         <Nav>
             <Nav.Item as="li">
                 <Nav.Link as={Link} to="/">

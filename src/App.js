@@ -11,7 +11,7 @@ function App() {
             <header className="app-header">
                 <Header />
             </header>
-            <main className="app-main">
+            <main id="app-main-container" className="app-main container">
                 <Main />
                 <aside className="app-sidebar container">
                     <Sidebar />
