@@ -1,4 +1,4 @@
-import { Nav, Navbar } from 'react-bootstrap'
+import { Nav, Navbar, } from 'react-bootstrap';
 
 const Footer = () => (
     <Navbar id="app-header-navigation" expand="lg">
@@ -23,6 +23,6 @@ const Footer = () => (
             </Nav.Item>
         </Nav>
     </Navbar>
-)
+);
 
-export default Footer
+export default Footer;

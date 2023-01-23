@@ -1,8 +1,8 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React from 'react';
+import { Routes, Route, } from 'react-router-dom';
 
-import Home from './pages/Home'
-import About from './pages/About'
+import Home from './pages/Home';
+import About from './pages/About';
 
 const Main = () => {
     return (
@@ -10,7 +10,7 @@ const Main = () => {
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
         </Routes>
-    )
-}
+    );
+};
 
-export default Main
+export default Main;

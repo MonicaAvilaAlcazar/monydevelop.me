@@ -1,5 +1,5 @@
-import { Nav, Navbar } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Nav, Navbar, } from 'react-bootstrap';
+import { Link, } from 'react-router-dom';
 
 const Header = () => (
     <Navbar id="app-header-navigation" expand="lg">
@@ -16,6 +16,6 @@ const Header = () => (
             </Nav.Item>
         </Nav>
     </Navbar>
-)
+);
 
-export default Header
+export default Header;

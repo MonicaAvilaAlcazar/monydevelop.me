@@ -6,6 +6,6 @@ const Home = () => (
         </span>{' '}
         <span className="content-emoji"></span>
     </div>
-)
+);
 
-export default Home
+export default Home;
