@@ -1,9 +1,9 @@
-import Header from './Header'
-import Sidebar from './Sidebar'
-import Footer from './Footer'
-import Main from './Main'
-import { Container } from 'react-bootstrap'
-import './App.scss'
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+import Main from './Main';
+import { Container, } from 'react-bootstrap';
+import './App.scss';
 
 function App() {
     return (
@@ -21,7 +21,7 @@ function App() {
                 <Footer />
             </footer>
         </Container>
-    )
+    );
 }
 
-export default App
+export default App;
