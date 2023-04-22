@@ -1,43 +1,80 @@
 {
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript",
+        "plugin:react/jsx-runtime",
+        "plugin:prettier/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "parser": "babel-eslint",
         "ecmaFeatures": {
-            "jsx": true,
-            "modules": true,
-            "experimentalObjectRestSpread": true
-        }
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
     },
-    "env": {
-        "browser": true,
-        "node": true,
-        "es2021": true
-    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "import",
+        "jsx-a11y",
+        "react-hooks",
+        "prettier"
+    ],
     "rules": {
-        "prefer-const": 1,
-        "no-var": 1,
-        "prefer-template": 1,
-        "no-eval": 1,
-        "space-before-function-paren": [
-            1,
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
             {
-                "anonymous": "always",
-                "named": "never"
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_",
+                "caughtErrorsIgnorePattern": "^_"
             }
         ],
-        "arrow-parens": 0,
-        "no-duplicate-imports": 1,
-        "curly": ["error"],
-        "brace-style": [1, "1tbs", { "allowSingleLine": true }],
-        "no-else-return": 1,
-        "indent": ["error", 4],
-        "space-in-parens": [1, "never"],
-        "array-bracket-spacing": [1, "never"],
-        "object-curly-spacing": [1, "always"],
-        "block-spacing": 1,
-        "radix": 1,
-        "comma-dangle": [1, "always"],
-        "semi": [2, "always"]
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "prettier/prettier": [
+            "warn",
+            {
+                "endOfLine": "auto",
+                "singleQuote": true
+            }
+        ],
+        "linebreak-style": "off",
+        "@typescript-eslint/ban-types": [
+            "error",
+            {
+                "extendDefaults": true,
+                "types": {
+                    "{}": false
+                }
+            }
+        ],
+        "object-shorthand": "error",
+        "no-console": "warn",
+        "indent": [
+            "error",
+            2
+        ],
+        "sort-imports": [
+            "error",
+            {
+                "ignoreCase": false,
+                "ignoreDeclarationSort": false,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": [
+                    "none",
+                    "all",
+                    "multiple",
+                    "single"
+                ],
+                "allowSeparatedGroups": false
+            }
+        ]
     }
 }
