@@ -1,6 +1,5 @@
 import { Container, Grid } from '@mui/material';
 import {
-  DiClojure,
   DiGithubBadge,
   DiHtml5,
   DiJava,
@@ -28,9 +27,6 @@ export default function About() {
         new technologies.
       </p>
       <Grid container>
-        <Grid item>
-          <DiClojure size={'3em'} />
-        </Grid>
         <Grid item>
           <DiGithubBadge size={'3em'} />
         </Grid>
