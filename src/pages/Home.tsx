@@ -16,7 +16,7 @@ export default function Home() {
       const timer = setTimeout(() => {
         setOpacity(0);
         clearTimeout(timer);
-      }, 1000);
+      }, 500);
     };
 
     window.addEventListener('click', handleMouseClick);

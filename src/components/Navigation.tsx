@@ -9,6 +9,10 @@ const pages = [
     label: 'About',
     link: '/about',
   },
+  {
+    label: 'GitHub',
+    link: 'https://github.com/MonicaAvilaAlcazar',
+  },
 ];
 
 const Navigation = () => {
