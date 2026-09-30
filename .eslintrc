@@ -46,15 +46,6 @@
             }
         ],
         "linebreak-style": "off",
-        "@typescript-eslint/ban-types": [
-            "error",
-            {
-                "extendDefaults": true,
-                "types": {
-                    "{}": false
-                }
-            }
-        ],
         "object-shorthand": "error",
         "no-console": "warn",
         "indent": [
