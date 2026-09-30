@@ -109,11 +109,13 @@ const Navigation = () => {
           anchor="right"
           open={drawerOpen}
           onClose={() => setDrawerOpen(false)}
-          PaperProps={{
-            sx: {
-              backgroundColor: 'background.default',
-              width: 240,
-              pt: 1,
+          slotProps={{
+            paper: {
+              sx: {
+                backgroundColor: 'background.default',
+                width: 240,
+                pt: 1,
+              },
             },
           }}
         >
@@ -140,10 +142,14 @@ const Navigation = () => {
               >
                 <ListItemText
                   primary={page.label}
-                  primaryTypographyProps={{
-                    fontFamily: "'Source Code Pro', monospace",
-                    fontWeight: 600,
-                    letterSpacing: '0.05em',
+                  slotProps={{
+                    primary: {
+                      sx: {
+                        fontFamily: "'Source Code Pro', monospace",
+                        fontWeight: 600,
+                        letterSpacing: '0.05em',
+                      },
+                    },
                   }}
                 />
               </ListItemButton>
