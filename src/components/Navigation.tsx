@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   AppBar,
   Box,
@@ -13,6 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import { HiMenu, HiX } from 'react-icons/hi';
+import { useState } from 'react';
 
 const pages = [
   {
@@ -22,6 +22,10 @@ const pages = [
   {
     label: 'about',
     link: '/about',
+  },
+  {
+    label: 'projects',
+    link: '/projects',
   },
   {
     label: 'github',

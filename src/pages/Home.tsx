@@ -1,39 +1,69 @@
 import { Box, Chip, Divider, Fade, Stack, Typography } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-const emojis = ['✨', '🎉', '👋🏼', '🔥', '💥', '🦄', '🌈', '🤠', '🦁', '🐯'];
 
 export default function Home() {
   const navigate = useNavigate();
-  const [location, setLocation] = useState({ top: 0, left: 0 });
-  const [emoji, setEmoji] = useState(emojis[0]);
-  const [opacity, setOpacity] = useState(0);
+  const spotlightRef = useRef<HTMLDivElement>(null);
   const year = new Date().getFullYear() - 2016;
 
   useEffect(() => {
-    const handleMouseClick = (event: MouseEvent) => {
-      const { clientX, clientY } = event;
-      setLocation({ top: clientY, left: clientX });
-      setEmoji(emojis[Math.floor(Math.random() * emojis.length)]);
-      setOpacity(1);
-      const timer = setTimeout(() => {
-        setOpacity(0);
-        clearTimeout(timer);
-      }, 500);
+    if (!window.matchMedia('(hover: hover)').matches) return undefined;
+
+    let rafId = 0;
+    const handleMove = (event: MouseEvent) => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const el = spotlightRef.current;
+        if (!el) return;
+        el.style.setProperty('--x', `${event.clientX}px`);
+        el.style.setProperty('--y', `${event.clientY}px`);
+        el.style.opacity = '1';
+      });
     };
 
-    window.addEventListener('click', handleMouseClick);
-
+    window.addEventListener('mousemove', handleMove);
     return () => {
-      window.removeEventListener('click', handleMouseClick);
+      window.removeEventListener('mousemove', handleMove);
+      if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
 
   return (
-    <Box>
+    <Box
+      sx={{
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        px: 3,
+        py: 6,
+        position: 'relative',
+      }}
+    >
+      <Box
+        ref={spotlightRef}
+        aria-hidden
+        sx={{
+          position: 'fixed',
+          inset: 0,
+          pointerEvents: 'none',
+          zIndex: 0,
+          opacity: 0,
+          transition: 'opacity 0.4s ease',
+          background:
+            'radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(124, 77, 255, 0.18), rgba(244, 143, 177, 0.06) 30%, transparent 60%)',
+        }}
+      />
+
       <Fade in timeout={1000}>
-        <Stack spacing={2} alignItems="center" textAlign="center">
+        <Stack
+          spacing={2}
+          alignItems="center"
+          textAlign="center"
+          sx={{ position: 'relative', zIndex: 1 }}
+        >
           <Typography
             variant="h6"
             sx={{
@@ -99,32 +129,8 @@ export default function Home() {
               }}
             />
           </Stack>
-          <Typography
-            variant="caption"
-            sx={{
-              mt: 6,
-              opacity: 0.4,
-              fontFamily: "'Source Code Pro', monospace",
-            }}
-          >
-            click anywhere {emoji}
-          </Typography>
         </Stack>
       </Fade>
-      <span
-        style={{
-          transition: 'opacity 1s',
-          opacity,
-          position: 'fixed',
-          top: `${location.top}px`,
-          left: `${location.left}px`,
-          fontSize: '3rem',
-          pointerEvents: 'none',
-          zIndex: 9999,
-        }}
-      >
-        {emoji}
-      </span>
     </Box>
   );
 }
