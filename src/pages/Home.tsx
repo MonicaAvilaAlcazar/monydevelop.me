@@ -119,7 +119,7 @@ export default function Home() {
                 window.open(
                   'https://github.com/MonicaAvilaAlcazar',
                   '_blank',
-                  'noopener,noreferrer'
+                  'noopener,noreferrer',
                 )
               }
               sx={{
