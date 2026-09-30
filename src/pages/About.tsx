@@ -31,7 +31,7 @@ export default function About() {
 
   return (
     <Fade in timeout={800}>
-      <Box sx={{ py: 8, maxWidth: 800, mx: 'auto', px: 3 }}>
+      <Box sx={{ py: { xs: 4, md: 8 }, maxWidth: 800, mx: 'auto', px: 3 }}>
         <Typography variant="h1">About</Typography>
         <Divider
           sx={{

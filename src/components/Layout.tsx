@@ -4,9 +4,24 @@ import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        overflowX: 'hidden',
+      }}
+    >
       <Navigation />
-      <Box component="main" sx={{ margin: 'auto' }}>
+      <Box
+        component="main"
+        sx={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+        }}
+      >
         <Outlet />
       </Box>
       <Box component="footer" sx={{ py: 4, textAlign: 'center' }}>
