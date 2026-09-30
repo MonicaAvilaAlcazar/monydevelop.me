@@ -60,9 +60,12 @@ export default function Home() {
       <Fade in timeout={1000}>
         <Stack
           spacing={2}
-          alignItems="center"
-          textAlign="center"
-          sx={{ position: 'relative', zIndex: 1 }}
+          sx={{
+            alignItems: 'center',
+            position: 'relative',
+            textAlign: 'center',
+            zIndex: 1,
+          }}
         >
           <Typography
             variant="h6"
@@ -116,7 +119,7 @@ export default function Home() {
                 window.open(
                   'https://github.com/MonicaAvilaAlcazar',
                   '_blank',
-                  'noopener,noreferrer'
+                  'noopener,noreferrer',
                 )
               }
               sx={{

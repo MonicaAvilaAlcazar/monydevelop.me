@@ -53,12 +53,12 @@ export default function About() {
         <Typography variant="h2" sx={{ mb: 4 }}>
           Tech Stack
         </Typography>
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
           {skills.map((skill) => {
             const Icon = skill.icon;
             return (
-              <Grid item xs={4} sm={3} md={2} key={skill.label}>
-                <Stack alignItems="center" spacing={1}>
+              <Grid size={{ xs: 4, sm: 3, md: 2 }} key={skill.label}>
+                <Stack spacing={1} sx={{ alignItems: 'center' }}>
                   <Box
                     sx={{
                       p: 2,
