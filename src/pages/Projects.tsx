@@ -1,7 +1,9 @@
-import { Box, Divider, Fade, Stack, Typography } from '@mui/material';
-import { IoGameController, IoSparkles } from 'react-icons/io5';
+import { Box, Button, Divider, Fade, Stack, Typography } from '@mui/material';
+import { IoCafe, IoGameController, IoSparkles } from 'react-icons/io5';
 import { IconType } from 'react-icons';
 import { Link as RouterLink } from 'react-router-dom';
+
+const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/karmesi';
 
 type Project = {
   slug: string;
@@ -43,9 +45,43 @@ export default function Projects() {
             my: 3,
           }}
         />
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 6 }}>
+        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
           A selection of things I&apos;ve been working on.
         </Typography>
+
+        <Box
+          sx={{
+            mb: 6,
+            p: 2.5,
+            borderRadius: 2,
+            border: '1px solid rgba(255,255,255,0.1)',
+            display: 'flex',
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: { xs: 'flex-start', sm: 'center' },
+            gap: 2,
+          }}
+        >
+          <Typography variant="body2" color="text.secondary" sx={{ flex: 1 }}>
+            My projects are free, with no ads and no tracking. If any of them
+            saves you time, you can support my work with a coffee.
+          </Typography>
+          <Button
+            variant="contained"
+            href={BUY_ME_A_COFFEE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            startIcon={<IoCafe />}
+            sx={{
+              flexShrink: 0,
+              backgroundColor: '#ffdd00',
+              color: '#000',
+              fontWeight: 600,
+              '&:hover': { backgroundColor: '#ffe53b' },
+            }}
+          >
+            Buy me a coffee
+          </Button>
+        </Box>
 
         <Stack spacing={3}>
           {projects.map((project) => {
