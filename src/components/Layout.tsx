@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { Outlet, useLocation } from 'react-router-dom';
+import { Suspense, useEffect } from 'react';
 import Navigation from './Navigation';
-import { useEffect } from 'react';
 
 const Layout = () => {
   const { pathname, hash } = useLocation();
@@ -32,7 +32,9 @@ const Layout = () => {
           width: '100%',
         }}
       >
-        <Outlet />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </Box>
       <Box component="footer" sx={{ py: 4, textAlign: 'center' }}>
         <Typography variant="caption" color="text.secondary">
