@@ -1,8 +1,18 @@
 import { Box, Typography } from '@mui/material';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navigation from './Navigation';
-import { Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Layout = () => {
+  const { pathname, hash } = useLocation();
+
+  // Start each new page at the top, unless the link targets a section.
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [pathname, hash]);
+
   return (
     <Box
       sx={{
