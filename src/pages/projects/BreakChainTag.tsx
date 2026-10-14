@@ -24,10 +24,10 @@ export default function BreakChainTag() {
             borderRadius: 2,
             border: 1,
             borderColor: 'warning.main',
-            color: 'warning.dark',
+            color: 'warning.main',
           }}
         >
-          <Typography variant="body1" color="warning.dark">
+          <Typography variant="body1" color="warning.main">
             WORK IN PROGRESS. This project is currently under development and
             not yet available for public access. Please check back later for
             updates and the official release.
