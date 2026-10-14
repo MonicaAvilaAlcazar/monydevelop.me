@@ -16,7 +16,7 @@ const projects: Project[] = [
     slug: 'break-chain-tag',
     name: 'Break Chain Tag',
     description:
-      'TGC Game project. A multiplayer fantasy game, full of lore and adventure. Built for modern browsers.',
+      'TCG Game project. A multiplayer fantasy game, full of lore and adventure. Built for modern browsers and mobile devices.',
     icon: IoGameController,
     brand: '#062a4d',
   },

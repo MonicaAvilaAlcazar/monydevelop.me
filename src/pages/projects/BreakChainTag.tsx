@@ -14,8 +14,8 @@ export default function BreakChainTag() {
           }}
         />
         <Typography variant="body1" color="text.secondary" sx={{ mb: 8 }}>
-          TGC Game project. A multiplayer fantasy game, full of lore and
-          adventure. Built for modern browsers.
+          TCG Game project. A multiplayer fantasy game, full of lore and
+          adventure. Built for modern browsers and mobile devices.
         </Typography>
         <Box
           sx={{
