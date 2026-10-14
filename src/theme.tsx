@@ -2,6 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
+    mode: 'dark',
     text: {
       primary: '#ffffff',
       secondary: 'rgba(255,255,255,0.7)',
@@ -11,6 +12,8 @@ const theme = createTheme({
     },
     primary: {
       main: '#7c4dff',
+      // Lighter shade for purple text on the dark background (WCAG AA).
+      light: '#9b7bff',
       contrastText: '#ffffff',
     },
     secondary: {
@@ -44,6 +47,28 @@ const theme = createTheme({
     borderRadius: 12,
   },
   components: {
+    MuiLink: {
+      defaultProps: {
+        color: 'primary.light',
+      },
+    },
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: 'outlined', color: 'primary' },
+          style: {
+            color: '#9b7bff',
+            borderColor: 'rgba(155,123,255,0.7)',
+          },
+        },
+        {
+          props: { variant: 'text', color: 'primary' },
+          style: {
+            color: '#9b7bff',
+          },
+        },
+      ],
+    },
     MuiCssBaseline: {
       styleOverrides: {
         html: {

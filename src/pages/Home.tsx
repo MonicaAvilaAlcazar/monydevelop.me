@@ -123,8 +123,8 @@ export default function Home() {
                 )
               }
               sx={{
-                borderColor: 'primary.main',
-                color: 'primary.main',
+                borderColor: 'primary.light',
+                color: 'primary.light',
                 fontFamily: "'Source Code Pro', monospace",
                 '&.MuiChip-clickable:hover': {
                   backgroundColor: 'rgba(124,77,255,0.1)',
