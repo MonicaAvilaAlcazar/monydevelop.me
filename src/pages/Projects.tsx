@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Fade, Stack, Typography } from '@mui/material';
-import { IoCafe, IoGameController, IoSparkles } from 'react-icons/io5';
+import { IoCafe, IoFlash, IoGameController, IoSparkles } from 'react-icons/io5';
 import { IconType } from 'react-icons';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -29,6 +29,14 @@ const projects: Project[] = [
       'A free, privacy-first Chrome extension to save up to 10 proxy servers and switch between them in one click.',
     icon: IoSparkles,
     brand: '#4419c4',
+  },
+  {
+    slug: 'perf-debugger',
+    name: 'PerfDebugger',
+    description:
+      'A free, privacy-first Chrome extension with real-time Core Web Vitals, React/Vue/Angular re-render detection and memory-leak alerts.',
+    icon: IoFlash,
+    brand: '#0e8a62',
   },
 ];
 

@@ -6,12 +6,16 @@ import { lazy } from 'react';
 const About = lazy(() => import('../pages/About'));
 const BreakChainTag = lazy(() => import('../pages/projects/BreakChainTag'));
 const Home = lazy(() => import('../pages/Home'));
-const PrivacyPolicy = lazy(
-  () => import('../pages/projects/TheProxyMagician/PrivacyPolicy'),
+const PerfDebugger = lazy(() => import('../pages/projects/PerfDebugger'));
+const PerfDebuggerPrivacyPolicy = lazy(
+  () => import('../pages/projects/PerfDebugger/PrivacyPolicy'),
 );
 const Projects = lazy(() => import('../pages/Projects'));
 const TheProxyMagician = lazy(
   () => import('../pages/projects/TheProxyMagician'),
+);
+const TheProxyMagicianPrivacyPolicy = lazy(
+  () => import('../pages/projects/TheProxyMagician/PrivacyPolicy'),
 );
 
 const App = () => {
@@ -29,7 +33,12 @@ const App = () => {
           />
           <Route
             path="projects/the-proxy-magician/privacy"
-            element={<PrivacyPolicy />}
+            element={<TheProxyMagicianPrivacyPolicy />}
+          />
+          <Route path="projects/perf-debugger" element={<PerfDebugger />} />
+          <Route
+            path="projects/perf-debugger/privacy-policy"
+            element={<PerfDebuggerPrivacyPolicy />}
           />
         </Route>
       </Routes>
