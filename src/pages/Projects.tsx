@@ -1,6 +1,6 @@
 import { Box, Divider, Fade, Stack, Typography } from '@mui/material';
+import { IoGameController, IoSparkles } from 'react-icons/io5';
 import { IconType } from 'react-icons';
-import { IoGameController } from 'react-icons/io5';
 import { Link as RouterLink } from 'react-router-dom';
 
 type Project = {
@@ -19,6 +19,14 @@ const projects: Project[] = [
       'TCG Game project. A multiplayer fantasy game, full of lore and adventure. Built for modern browsers and mobile devices.',
     icon: IoGameController,
     brand: '#062a4d',
+  },
+  {
+    slug: 'the-proxy-magician',
+    name: 'The Proxy Magician',
+    description:
+      'A free, privacy-first Chrome extension to save up to 10 proxy servers and switch between them in one click.',
+    icon: IoSparkles,
+    brand: '#4419c4',
   },
 ];
 
