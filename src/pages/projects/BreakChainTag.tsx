@@ -1,9 +1,11 @@
 import { Box, Divider, Fade, Typography } from '@mui/material';
+import { ProjectBreadcrumbs, ProjectPager } from '../../components/ProjectNav';
 
 export default function BreakChainTag() {
   return (
     <Fade in timeout={800}>
       <Box sx={{ py: { xs: 4, md: 8 }, maxWidth: 800, mx: 'auto', px: 3 }}>
+        <ProjectBreadcrumbs slug="break-chain-tag" />
         <Typography variant="h1">Break Chain Tag</Typography>
         <Divider
           sx={{
@@ -33,6 +35,8 @@ export default function BreakChainTag() {
             updates and the official release.
           </Typography>
         </Box>
+
+        <ProjectPager slug="break-chain-tag" />
       </Box>
     </Fade>
   );

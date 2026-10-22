@@ -34,6 +34,10 @@ import {
   IoTrendingUp,
   IoWarning,
 } from 'react-icons/io5';
+import {
+  ProjectBreadcrumbs,
+  ProjectPager,
+} from '../../../components/ProjectNav';
 import { IconType } from 'react-icons';
 import { Link as RouterLink } from 'react-router-dom';
 import comparisonScreenshot from '../../../assets/images/PD/screenshot-3-comparison.png';
@@ -330,6 +334,7 @@ export default function PerfDebugger() {
           },
         }}
       >
+        <ProjectBreadcrumbs slug="perf-debugger" />
         <Typography variant="h1">PerfDebugger</Typography>
         <Divider
           sx={{
@@ -753,6 +758,8 @@ export default function PerfDebugger() {
             Privacy policy
           </Link>
         </Typography>
+
+        <ProjectPager slug="perf-debugger" />
       </Box>
     </Fade>
   );
