@@ -10,8 +10,7 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
-import { IoArrowBack } from 'react-icons/io5';
-import { Link as RouterLink } from 'react-router-dom';
+import { ProjectBreadcrumbs } from '../../../components/ProjectNav';
 
 const LAST_UPDATED = 'October 13, 2026';
 const CONTACT_EMAIL = 'support@monydevelop.me';
@@ -84,14 +83,7 @@ export default function PrivacyPolicy() {
           },
         }}
       >
-        <Link
-          component={RouterLink}
-          to="/projects/the-proxy-magician"
-          underline="hover"
-          sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, mb: 4 }}
-        >
-          <IoArrowBack /> The Proxy Magician
-        </Link>
+        <ProjectBreadcrumbs slug="the-proxy-magician" page="Privacy Policy" />
 
         <Typography variant="h1">Privacy Policy</Typography>
         <Divider

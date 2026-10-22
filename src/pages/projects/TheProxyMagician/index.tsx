@@ -20,10 +20,15 @@ import {
   IoGrid,
   IoLockClosed,
   IoLogoChrome,
+  IoLogoGithub,
   IoShieldCheckmark,
   IoShuffle,
   IoWarning,
 } from 'react-icons/io5';
+import {
+  ProjectBreadcrumbs,
+  ProjectPager,
+} from '../../../components/ProjectNav';
 import { IconType } from 'react-icons';
 import { Link as RouterLink } from 'react-router-dom';
 import screenshot1 from '../../../assets/images/TPM/screenshot-1.png';
@@ -32,6 +37,7 @@ import screenshot3 from '../../../assets/images/TPM/screenshot-3.png';
 
 // Replace with the Chrome Web Store URL once the extension is published.
 const CHROME_WEB_STORE_URL = '#';
+const GITHUB_URL = 'https://github.com/MonicaAvilaAlcazar/TheProxyMagician';
 const PRIVACY_POLICY_PATH = '/projects/the-proxy-magician/privacy';
 
 const cardSx = {
@@ -220,6 +226,7 @@ export default function TheProxyMagician() {
           },
         }}
       >
+        <ProjectBreadcrumbs slug="the-proxy-magician" />
         <Typography variant="h1">The Proxy Magician</Typography>
         <Divider
           sx={{
@@ -234,13 +241,22 @@ export default function TheProxyMagician() {
           between them in one click.
         </Typography>
 
-        <Stack direction="row" spacing={2} sx={{ mb: 3, flexWrap: 'wrap' }}>
+        <Stack direction="row" sx={{ mb: 3, flexWrap: 'wrap', gap: 2 }}>
           <Button
             variant="contained"
             href={CHROME_WEB_STORE_URL}
             startIcon={<IoLogoChrome />}
           >
             Add to Chrome
+          </Button>
+          <Button
+            variant="outlined"
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            startIcon={<IoLogoGithub />}
+          >
+            View on GitHub
           </Button>
           <Button
             variant="outlined"
@@ -641,10 +657,16 @@ export default function TheProxyMagician() {
           sx={{ mt: 10 }}
         >
           Version 1.0.0 · MIT License ·{' '}
+          <Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </Link>{' '}
+          ·{' '}
           <Link component={RouterLink} to={PRIVACY_POLICY_PATH}>
             Privacy policy
           </Link>
         </Typography>
+
+        <ProjectPager slug="the-proxy-magician" />
       </Box>
     </Fade>
   );
