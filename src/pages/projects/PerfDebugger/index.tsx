@@ -46,8 +46,8 @@ import featuresScreenshot from '../../../assets/images/PD/screenshot-2-features.
 import heroScreenshot from '../../../assets/images/PD/screenshot-1-hero.png';
 import rerendersScreenshot from '../../../assets/images/PD/screenshot-4-rerenders.png';
 
-// Replace with the Chrome Web Store URL once the extension is published.
-const CHROME_WEB_STORE_URL = '#';
+const CHROME_WEB_STORE_URL =
+  'https://chromewebstore.google.com/detail/perfdebugger-%E2%80%94-real-time/mbleeeedeaibpokcllphdlpnbpaojjcm';
 const GITHUB_URL = 'https://github.com/MonicaAvilaAlcazar/PerfDebugger';
 const PRIVACY_POLICY_PATH = '/projects/perf-debugger/privacy-policy';
 const SUPPORT_EMAIL = 'support@monydevelop.me';
@@ -354,6 +354,8 @@ export default function PerfDebugger() {
           <Button
             variant="contained"
             href={CHROME_WEB_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             startIcon={<IoLogoChrome />}
           >
             Add to Chrome
