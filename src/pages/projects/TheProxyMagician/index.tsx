@@ -35,8 +35,8 @@ import screenshot1 from '../../../assets/images/TPM/screenshot-1.png';
 import screenshot2 from '../../../assets/images/TPM/screenshot-2.png';
 import screenshot3 from '../../../assets/images/TPM/screenshot-3.png';
 
-// Replace with the Chrome Web Store URL once the extension is published.
-const CHROME_WEB_STORE_URL = '#';
+const CHROME_WEB_STORE_URL =
+  'https://chromewebstore.google.com/detail/the-proxy-magician/hmkcfbjaidhibekofgmmdnigapibkcei';
 const GITHUB_URL = 'https://github.com/MonicaAvilaAlcazar/TheProxyMagician';
 const PRIVACY_POLICY_PATH = '/projects/the-proxy-magician/privacy';
 
@@ -245,6 +245,8 @@ export default function TheProxyMagician() {
           <Button
             variant="contained"
             href={CHROME_WEB_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             startIcon={<IoLogoChrome />}
           >
             Add to Chrome
