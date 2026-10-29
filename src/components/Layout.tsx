@@ -40,6 +40,15 @@ const Layout = () => {
         <Typography variant="caption" color="text.secondary">
           &copy; {new Date().getFullYear()} Monica Avila
         </Typography>
+        <Typography
+          variant="caption"
+          color="text.secondary"
+          component="p"
+          sx={{ mt: 0.5 }}
+        >
+          This site uses Umami, cookieless analytics that collects no personal
+          data.
+        </Typography>
       </Box>
     </Box>
   );

@@ -248,12 +248,16 @@ export default function TheProxyMagician() {
             target="_blank"
             rel="noopener noreferrer"
             startIcon={<IoLogoChrome />}
+            data-umami-event="add-to-chrome"
+            data-umami-event-project="the-proxy-magician"
           >
             Add to Chrome
           </Button>
           <Button
             variant="outlined"
             href={GITHUB_URL}
+            data-umami-event="view-on-github"
+            data-umami-event-project="the-proxy-magician"
             target="_blank"
             rel="noopener noreferrer"
             startIcon={<IoLogoGithub />}

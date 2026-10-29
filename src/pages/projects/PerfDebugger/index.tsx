@@ -357,12 +357,16 @@ export default function PerfDebugger() {
             target="_blank"
             rel="noopener noreferrer"
             startIcon={<IoLogoChrome />}
+            data-umami-event="add-to-chrome"
+            data-umami-event-project="perfdebugger"
           >
             Add to Chrome
           </Button>
           <Button
             variant="outlined"
             href={GITHUB_URL}
+            data-umami-event="view-on-github"
+            data-umami-event-project="perfdebugger"
             target="_blank"
             rel="noopener noreferrer"
             startIcon={<IoLogoGithub />}
